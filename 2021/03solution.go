@@ -50,12 +50,11 @@ func ReadFile(inputName string) []string {
 }
 
 func ParseBinary(value string) int64 {
-	if result, err := strconv.ParseInt(value, 2, 64); err != nil {
+	result, err := strconv.ParseInt(value, 2, 64)
+	if err != nil {
 		log.Fatal(err)
-	} else {
-		return result
 	}
-	return -1
+	return result
 }
 
 func Not(value string) string {
