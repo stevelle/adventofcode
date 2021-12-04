@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	inputFile := "02-input.txt"
+	inputFile := "input.txt"
 	PartOne(inputFile)
 	PartTwo(inputFile)
 }

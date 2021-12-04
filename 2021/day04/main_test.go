@@ -11,7 +11,7 @@ func TestSolution(t *testing.T) {
 	var lines []string
 
 	t.Run("ReadFile", func(t *testing.T) {
-		lines = ReadFile("04-test-input.txt")
+		lines = ReadFile("test-input.txt")
 		assert.Equal(t, 19, len(lines))
 	})
 
@@ -25,7 +25,7 @@ func TestSolution(t *testing.T) {
 }
 
 func BenchmarkPartOne(b *testing.B) {
-	INPUT_FILE := "04-input.txt"
+	INPUT_FILE := "input.txt"
 	lines := ReadFile(INPUT_FILE)
 	b.ResetTimer()
 
@@ -35,7 +35,7 @@ func BenchmarkPartOne(b *testing.B) {
 }
 
 func BenchmarkPartTwo(b *testing.B) {
-	INPUT_FILE := "04-input.txt"
+	INPUT_FILE := "input.txt"
 	lines := ReadFile(INPUT_FILE)
 	b.ResetTimer()
 

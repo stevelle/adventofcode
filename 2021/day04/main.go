@@ -13,7 +13,7 @@ const MARKED = "x"
 const BINGO = 5
 
 func main() {
-	lines := ReadFile("04-input.txt")
+	lines := ReadFile("input.txt")
 	fmt.Println("** Result A: ", PartOne(lines))
 	fmt.Println("** Result B: ", PartTwo(lines))
 }

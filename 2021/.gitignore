@@ -1,4 +1,3 @@
 *.txt
 go.???
-data/*
 build/*

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	lines := ReadFile("03-input.txt")
+	lines := ReadFile("input.txt")
 	fmt.Println("** Result A: ", PartOne(lines))
 	fmt.Println("** Result B: ", PartTwo(lines))
 }
