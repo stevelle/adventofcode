@@ -58,19 +58,16 @@ func ReadFile(inputName string) []string {
 func constructBoards(rows []string) [][][]string {
 	boards := make([][][]string, 0)
 	var currentBoard [][]string
-	i := 0
 	for _, line := range rows {
 		// blank lines indicate time for a new board
 		if len(strings.TrimSpace(line)) == 0 {
 			if len(currentBoard) == 5 {
 				boards = append(boards, currentBoard)
 			}
-			currentBoard = make([][]string, 5)
-			i = 0
+			currentBoard = make([][]string, 0)
 			continue
 		}
-		currentBoard[i] = strings.Fields(line)
-		i++
+		currentBoard = append(currentBoard, strings.Fields(line))
 	}
 	// be sure to add the last board built
 	boards = append(boards, currentBoard)
